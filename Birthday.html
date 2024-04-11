@@ -2029,17 +2029,19 @@ function up() {
 
   // Function to scroll the window down by 20 pixels
   function scrollDown() {
-    window.scrollBy(0, 20);
+    window.scrollBy(0, 30);
+    // For mobile compatibility, use window.scrollTo(0, window.scrollY + 20);
   }
 
   // Set an interval to call the scroll function every 3 seconds
-  var scrollInterval = setInterval(scrollDown, 4000); // 3000 milliseconds = 3 seconds
+  var scrollInterval = setInterval(scrollDown, 3000); // 3000 milliseconds = 3 seconds
 
   // Optional: Stop the scrolling after a certain amount of time (e.g., 30 seconds)
   setTimeout(function() {
     clearInterval(scrollInterval); // Stop the scrolling after 30 seconds
-  }, 40000); // 30000 milliseconds = 30 seconds
+  }, 30000); // 30000 milliseconds = 30 seconds
 }
+
 //patr....end
 //audio object...
 var x=new Audio();
