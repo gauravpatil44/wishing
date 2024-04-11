@@ -2017,15 +2017,28 @@ function wpaction()
 }
 //WhatsApp button.... end
 //Patr.... opening
-function up()
-{
-   document.querySelector("#img1").classList.add("img1a");
-   document.querySelector("#img2").classList.add("img2a");
-   document.querySelector("#img3").classList.add("img3a");
-   document.querySelector(".wish").classList.add("wisha");
-   document.querySelector(".openwish").classList.add("openwisha");
-   document.querySelector(".gif").classList.add("gifa");
-   window.scroll(0,0);
+function up() {
+  // Add classes to elements
+  document.querySelector("#img1").classList.add("img1a");
+  document.querySelector("#img2").classList.add("img2a");
+  document.querySelector("#img3").classList.add("img3a");
+  document.querySelector(".wish").classList.add("wisha");
+  document.querySelector(".openwish").classList.add("openwisha");
+  document.querySelector(".gif").classList.add("gifa");
+  pop.play();
+
+  // Function to scroll the window down by 20 pixels
+  function scrollDown() {
+    window.scrollBy(0, 20);
+  }
+
+  // Set an interval to call the scroll function every 3 seconds
+  var scrollInterval = setInterval(scrollDown, 4000); // 3000 milliseconds = 3 seconds
+
+  // Optional: Stop the scrolling after a certain amount of time (e.g., 30 seconds)
+  setTimeout(function() {
+    clearInterval(scrollInterval); // Stop the scrolling after 30 seconds
+  }, 40000); // 30000 milliseconds = 30 seconds
 }
 //patr....end
 //audio object...
